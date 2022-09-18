@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Cripto from "./components/Cripto";
-import "./App.css";
+import Cripto from "./cripto/Cripto";
+import "./Cuadricula.css";
 
-function App() {
+function Cuadricula() {
   // calling the environment variable
   const API_URL = process.env.REACT_APP_URL;
   const [criptos, setCriptos] = useState();
@@ -24,6 +24,7 @@ function App() {
       <div className="cripto-container">
         {criptos.map(({ id, name, priceUsd, symbol, changePercent24Hr }) => (
           <Cripto
+            id={id}
             key={id}
             name={name}
             priceUsd={priceUsd}
@@ -36,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default Cuadricula;
