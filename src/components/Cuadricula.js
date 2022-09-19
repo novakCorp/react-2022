@@ -19,7 +19,7 @@ function Cuadricula() {
   }
 
   return (
-    <div className="app-container">
+    <div className="grid-container">
       <h1>Lista de criptomonedas</h1>
       <div className="cripto-container">
         {criptos.map(({ id, name, priceUsd, symbol, changePercent24Hr }) => (
